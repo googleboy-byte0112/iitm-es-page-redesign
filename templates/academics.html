@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - IIT Madras BS in Electronic Systems</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="main-nav">
+        <div class="nav-left">
+            <button class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="https://es.study.iitm.ac.in/auth/login" class="apply-button">
+                <span class="apply-main">Apply Now</span>
+                <span class="apply-sub">Applications close by January 02, 2025</span>
+            </a>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="https://study.iitm.ac.in/es/login" class="main-sign-in-btn">
+                <i class="fas fa-user"></i>
+                <span>Sign In</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="main-logo">
+        <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+    </div>
+
+    <button class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="/">
+                <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            </a>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#overall-structure"><i class="fas fa-layer-group"></i> Overall Structure</a></li>
+            <li><a href="#course-registrations"><i class="fas fa-clipboard-list"></i> Course Registrations</a></li>
+            <li><a href="#assessments"><i class="fas fa-tasks"></i> Assessments</a></li>
+            <li><a href="#exam-cities"><i class="fas fa-globe"></i> Exam Cities</a></li>
+            <li><a href="#fee-structure"><i class="fas fa-coins"></i> Fee Structure</a></li>
+            <li><a href="#course-levels"><i class="fas fa-graduation-cap"></i> Course Levels</a></li>
+            <li><a href="#sample-certificates"><i class="fas fa-certificate"></i> Sample Certificates</a></li>
+            <li><a href="#academic-calendar"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+            <li>
+                <a href="/faq.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>FAQ</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="academics-content">
+        <div class="academics-hero">
+            <h1>Academic Structure</h1>
+            <p>A comprehensive guide to the BS in Electronic Systems program</p>
+        </div>
+
+        <section id="overall-structure" class="academic-section">
+            <h2>Overall Structure</h2>
+            <div class="section-content">
+                <p class="intro-text">The program comprises <span class="text-highlight">three levels</span> and a learner has to successfully complete all three levels to get the <span class="text-highlight">BS Degree from IIT Madras</span>.</p>
+                <p class="intro-text">There is <span class="text-highlight">flexibility to exit at any level</span>. Depending on the courses completed and credits earned, the learner can receive:</p>
+                
+                <div class="program-levels">
+                    <div class="level-card foundation">
+                        <div class="level-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Foundation Level</h3>
+                        </div>
+                        <div class="level-content">
+                            <div class="credit-badge">43 Credits</div>
+                            <ul class="level-list">
+                                <li><i class="fas fa-book"></i> 9 Theory courses</li>
+                                <li><i class="fas fa-flask"></i> 5 Labs</li>
+                                <li class="exit-option"><i class="fas fa-certificate"></i> Exit with: Foundation Certificate</li>
+                            </ul>
+                        </div>
+                        <div class="level-footer">
+                            <div class="progress-indicator">Level 1 of 3</div>
+                        </div>
+                    </div>
+
+                    <div class="connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-dot"></div>
+                    </div>
+
+                    <div class="level-card diploma">
+                        <div class="level-header">
+                            <i class="fas fa-award"></i>
+                            <h3>Diploma Level</h3>
+                        </div>
+                        <div class="level-content">
+                            <div class="credit-badge">43 Credits</div>
+                            <ul class="level-list">
+                                <li><i class="fas fa-book"></i> 9 Theory courses</li>
+                                <li><i class="fas fa-flask"></i> 3 Labs</li>
+                                <li><i class="fas fa-project-diagram"></i> 1 Project course</li>
+                                <li class="exit-option"><i class="fas fa-certificate"></i> Exit with: Diploma</li>
+                            </ul>
+                        </div>
+                        <div class="level-footer">
+                            <div class="progress-indicator">Level 2 of 3</div>
+                        </div>
+                    </div>
+
+                    <div class="connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-dot"></div>
+                    </div>
+
+                    <div class="level-card degree">
+                        <div class="level-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>BS Degree Level</h3>
+                        </div>
+                        <div class="level-content">
+                            <div class="credit-badge">56 Credits</div>
+                            <ul class="level-list">
+                                <li><i class="fas fa-book"></i> 12 Theory courses</li>
+                                <li><i class="fas fa-flask"></i> 1 Lab</li>
+                                <li><i class="fas fa-briefcase"></i> Optional Apprenticeship</li>
+                                <li class="exit-option"><i class="fas fa-graduation-cap"></i> Exit with: BS Degree</li>
+                            </ul>
+                        </div>
+                        <div class="level-footer">
+                            <div class="progress-indicator">Level 3 of 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="total-credits">
+                    <div class="credits-circle">
+                        <span class="credits-number">142</span>
+                        <span class="credits-text">Total Credits</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="course-registrations" class="academic-section">
+            <h2>Course Registrations</h2>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Full-time Students</h3>
+                        <p>Recommended to take 4 courses per term</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Working Professionals</h3>
+                        <p>Recommended to take 2-3 courses per term</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessments" class="academic-section">
+            <h2>Assessments</h2>
+            <div class="section-content">
+                <div class="assessment-types">
+                    <div class="assessment-card primary">
+                        <div class="assessment-header">
+                            <i class="fas fa-tasks"></i>
+                            <h3>Weekly Assignments</h3>
+                        </div>
+                        <p>Regular online submissions to track your progress and understanding</p>
+                        <span class="weight">30% Weightage</span>
+                    </div>
+                    <div class="assessment-card primary">
+                        <div class="assessment-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h3>Monthly Quizzes</h3>
+                        </div>
+                        <p>Two in-person quizzes to evaluate your learning journey</p>
+                        <span class="weight">30% Weightage</span>
+                    </div>
+                    <div class="assessment-card primary">
+                        <div class="assessment-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>End Term Exam</h3>
+                        </div>
+                        <p>Final comprehensive evaluation of your understanding</p>
+                        <span class="weight">40% Weightage</span>
+                    </div>
+                </div>
+                
+                <div class="additional-assessments">
+                    <h3>Additional Evaluations</h3>
+                    <div class="assessment-grid">
+                        <div class="assessment-card secondary">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Programming Exams</span>
+                        </div>
+                        <div class="assessment-card secondary">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Mini Projects</span>
+                        </div>
+                        <div class="assessment-card secondary">
+                            <i class="fas fa-comments"></i>
+                            <span>Vivas</span>
+                        </div>
+                        <div class="assessment-card secondary">
+                            <i class="fas fa-flask"></i>
+                            <span>Lab Demonstrations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="exam-cities" class="academic-section">
+            <h2>Exam Cities</h2>
+            <div class="section-content">
+                <div class="locations-list-container">
+                    <div class="location-card">
+                        <div class="location-title">
+                            <i class="fas fa-globe-asia"></i>
+                            <h3>Middle East</h3>
+                        </div>
+                        <div class="location-cities">
+                            <span class="city-tag">Dubai</span>
+                            <span class="city-tag">Hamdan</span>
+                            <span class="city-tag">Sharjah</span>
+                            <span class="city-tag">Manama</span>
+                            <span class="city-tag">Salmiya</span>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-title">
+                            <i class="fas fa-globe-asia"></i>
+                            <h3>Asia Pacific</h3>
+                        </div>
+                        <div class="location-cities">
+                            <span class="city-tag">Singapore</span>
+                            <span class="city-tag">Colombo</span>
+                            <span class="city-tag">Jaffna</span>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-title">
+                            <i class="fas fa-info-circle"></i>
+                            <h3>Additional Information</h3>
+                        </div>
+                        <div class="info-notes">
+                            <div class="info-note">
+                                <i class="fas fa-laptop"></i>
+                                <p>Remote proctored exams available for other countries</p>
+                            </div>
+                            <div class="info-note">
+                                <i class="fas fa-coins"></i>
+                                <p>Additional fees apply for international examinations</p>
+                            </div>
+                        </div>
+                        <button class="view-all-cities" onclick="openCitiesModal()">
+                            <i class="fas fa-list"></i>
+                            View All Exam Cities
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cities Modal -->
+            <div id="citiesModal" class="cities-modal">
+                <div class="modal-content">
+                    <button class="close-modal" onclick="closeCitiesModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <h2>Complete List of Exam Cities</h2>
+                    <div class="cities-list">
+                        <!-- International -->
+                        <div class="country-section">
+                            <h3>International</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Dubai</div>
+                                <div class="city-item">Hamdan (AUH)</div>
+                                <div class="city-item">Sharjah</div>
+                                <div class="city-item">Manama</div>
+                                <div class="city-item">Salmiya</div>
+                                <div class="city-item">Muscat</div>
+                                <div class="city-item">Singapore</div>
+                                <div class="city-item">Colombo</div>
+                                <div class="city-item">Jaffna</div>
+                            </div>
+                        </div>
+
+                        <!-- South India -->
+                        <div class="country-section">
+                            <h3>South India</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Chennai-Avadi</div>
+                                <div class="city-item">Chennai-South</div>
+                                <div class="city-item">Coimbatore</div>
+                                <div class="city-item">Erode</div>
+                                <div class="city-item">Kanchipuram</div>
+                                <div class="city-item">Madurai</div>
+                                <div class="city-item">Salem</div>
+                                <div class="city-item">Thanjavur</div>
+                                <div class="city-item">Tiruchirappalli</div>
+                                <div class="city-item">Tirunelveli</div>
+                                <div class="city-item">Vellore</div>
+                                <div class="city-item">Hyderabad</div>
+                                <div class="city-item">Warangal</div>
+                                <div class="city-item">Bengaluru</div>
+                                <div class="city-item">Belgaum</div>
+                                <div class="city-item">Dharwad</div>
+                                <div class="city-item">Gulbarga</div>
+                                <div class="city-item">Mangalore</div>
+                                <div class="city-item">Mysore</div>
+                            </div>
+                        </div>
+
+                        <!-- Kerala -->
+                        <div class="country-section">
+                            <h3>Kerala</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Calicut</div>
+                                <div class="city-item">Ernakulam</div>
+                                <div class="city-item">Kollam</div>
+                                <div class="city-item">Kottayam</div>
+                                <div class="city-item">Palakkad</div>
+                                <div class="city-item">Thrissur</div>
+                                <div class="city-item">Trivandrum</div>
+                            </div>
+                        </div>
+
+                        <!-- Andhra Pradesh -->
+                        <div class="country-section">
+                            <h3>Andhra Pradesh</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Anantapur</div>
+                                <div class="city-item">Bhimavaram</div>
+                                <div class="city-item">Guntur</div>
+                                <div class="city-item">Kadapa</div>
+                                <div class="city-item">Kurnool</div>
+                                <div class="city-item">Rajahmundry</div>
+                                <div class="city-item">Tirupathi</div>
+                                <div class="city-item">Vijayawada</div>
+                                <div class="city-item">Vishakhapatnam</div>
+                            </div>
+                        </div>
+
+                        <!-- North India -->
+                        <div class="country-section">
+                            <h3>North India</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Delhi</div>
+                                <div class="city-item">Chandigarh</div>
+                                <div class="city-item">Jalandhar</div>
+                                <div class="city-item">Ludhiana</div>
+                                <div class="city-item">Amritsar</div>
+                                <div class="city-item">Jaipur</div>
+                                <div class="city-item">Jodhpur</div>
+                                <div class="city-item">Kota</div>
+                                <div class="city-item">Udaipur</div>
+                                <div class="city-item">Dehradun</div>
+                                <div class="city-item">Haldwani</div>
+                                <div class="city-item">Roorkee</div>
+                            </div>
+                        </div>
+
+                        <!-- Central India -->
+                        <div class="country-section">
+                            <h3>Central India</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Bhopal</div>
+                                <div class="city-item">Gwalior</div>
+                                <div class="city-item">Indore</div>
+                                <div class="city-item">Jabalpur</div>
+                                <div class="city-item">Raipur</div>
+                            </div>
+                        </div>
+
+                        <!-- West India -->
+                        <div class="country-section">
+                            <h3>West India</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Mumbai</div>
+                                <div class="city-item">Pune</div>
+                                <div class="city-item">Nagpur</div>
+                                <div class="city-item">Nashik</div>
+                                <div class="city-item">Aurangabad</div>
+                                <div class="city-item">Kolhapur</div>
+                                <div class="city-item">Ahmedabad</div>
+                                <div class="city-item">Vadodara</div>
+                                <div class="city-item">Surat</div>
+                                <div class="city-item">Rajkot</div>
+                                <div class="city-item">Panaji</div>
+                            </div>
+                        </div>
+
+                        <!-- East India -->
+                        <div class="country-section">
+                            <h3>East India</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Kolkata</div>
+                                <div class="city-item">Siliguri</div>
+                                <div class="city-item">Durgapur</div>
+                                <div class="city-item">Bhubaneswar</div>
+                                <div class="city-item">Rourkela</div>
+                                <div class="city-item">Patna</div>
+                                <div class="city-item">Ranchi</div>
+                                <div class="city-item">Jamshedpur</div>
+                            </div>
+                        </div>
+
+                        <!-- Northeast India -->
+                        <div class="country-section">
+                            <h3>Northeast India</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Guwahati</div>
+                                <div class="city-item">Dibrugarh</div>
+                                <div class="city-item">Silchar</div>
+                                <div class="city-item">Shillong</div>
+                                <div class="city-item">Agartala</div>
+                                <div class="city-item">Imphal</div>
+                                <div class="city-item">Aizawl</div>
+                                <div class="city-item">Dimapur</div>
+                            </div>
+                        </div>
+
+                        <!-- Union Territories -->
+                        <div class="country-section">
+                            <h3>Union Territories</h3>
+                            <div class="cities-grid">
+                                <div class="city-item">Port Blair</div>
+                                <div class="city-item">Puducherry</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function openCitiesModal() {
+                document.getElementById('citiesModal').style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeCitiesModal() {
+                document.getElementById('citiesModal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            // Close modal when clicking outside
+            window.onclick = function(event) {
+                let modal = document.getElementById('citiesModal');
+                if (event.target == modal) {
+                    closeCitiesModal();
+                }
+            }
+        </script>
+
+        <section id="fee-structure" class="academic-section">
+            <h2>Fee Structure</h2>
+            <div class="section-content">
+                <div class="fee-cards">
+                    <div class="fee-card">
+                        <div class="fee-header foundation">
+                            <h3>Foundation</h3>
+                            <div class="fee-credits">43 Credits</div>
+                        </div>
+                        <div class="fee-details">
+                            <div class="fee-item">
+                                <span>Per Credit</span>
+                                <strong>₹1,000 - ₹2,000</strong>
+                            </div>
+                            <div class="fee-item total">
+                                <span>Total</span>
+                                <strong>₹80,000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fee-card">
+                        <div class="fee-header diploma">
+                            <h3>Diploma</h3>
+                            <div class="fee-credits">43 Credits</div>
+                        </div>
+                        <div class="fee-details">
+                            <div class="fee-item">
+                                <span>Per Credit</span>
+                                <strong>₹4,000</strong>
+                            </div>
+                            <div class="fee-item total">
+                                <span>Total</span>
+                                <strong>₹1,68,000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fee-card">
+                        <div class="fee-header degree">
+                            <h3>BS Degree</h3>
+                            <div class="fee-credits">56 Credits</div>
+                        </div>
+                        <div class="fee-details">
+                            <div class="fee-item">
+                                <span>Per Credit</span>
+                                <strong>₹6,000</strong>
+                            </div>
+                            <div class="fee-item total">
+                                <span>Total</span>
+                                <strong>₹3,36,000</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fee-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Fee waivers available based on category and family income. Not applicable for international students.</p>
+                </div>
+            </div>
+        </section>
+<!-- 
+        <div class="intro-text">
+            The BS in Data Science and Applications program is designed to provide students with a strong foundation in data science, programming, and mathematics. <span class="text-highlight">Students can exit with a certificate at various levels</span> based on the number of credits completed.
+        </div>
+        <div class="intro-text">
+            The program follows a <span class="text-highlight">flexible learning approach</span> that allows students to learn at their own pace while maintaining academic rigor through continuous evaluation.
+        </div>
+        <div class="cta-container">
+            <a href="https://study.iitm.ac.in/ds/" target="_blank" class="cta-button">
+                Know More
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div> -->
+
+        <section id="course-levels" class="academic-section">
+            <h2>Course Levels</h2>
+            <div class="section-content">
+                <div class="course-grid">
+                    <div class="course-level-card">
+                        <div class="card-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Foundation Level</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="course-stats">
+                                <div class="stat">
+                                    <i class="fas fa-book"></i>
+                                    <span>9 Theory Courses</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-flask"></i>
+                                    <span>5 Labs</span>
+                                </div>
+                            </div>
+                            <div class="key-courses">
+                                <h4>Key Courses</h4>
+                                <ul>
+                                    <li>Mathematics for Electronics I</li>
+                                    <li>Programming and Data Structures</li>
+                                    <li>Digital Systems</li>
+                                    <li>Electrical and Electronic Circuits</li>
+                                    <li>Electronics Laboratory</li>
+                                    <li>Embedded C Programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-level-card">
+                        <div class="card-header">
+                            <i class="fas fa-award"></i>
+                            <h3>Diploma Level</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="course-stats">
+                                <div class="stat">
+                                    <i class="fas fa-book"></i>
+                                    <span>9 Theory Courses</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-flask"></i>
+                                    <span>3 Labs</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>1 Project</span>
+                                </div>
+                            </div>
+                            <div class="key-courses">
+                                <h4>Key Courses</h4>
+                                <ul>
+                                    <li>Math for Electronics II</li>
+                                    <li>Signals and Systems</li>
+                                    <li>Analog Electronic Systems</li>
+                                    <li>Digital System Design</li>
+                                    <li>Digital Signal Processing</li>
+                                    <li>Control Engineering</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-level-card">
+                        <div class="card-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>BS Degree Level</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="course-stats">
+                                <div class="stat">
+                                    <i class="fas fa-book"></i>
+                                    <span>12 Theory Courses</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-flask"></i>
+                                    <span>1 Lab</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Optional Apprenticeship</span>
+                                </div>
+                            </div>
+                            <div class="key-courses">
+                                <h4>Core Courses</h4>
+                                <ul>
+                                    <li>Embedded Linux and FPGAs</li>
+                                    <li>Electromagnetic Fields</li>
+                                    <li>Electronic Product Design</li>
+                                    <li>Professional Growth</li>
+                                </ul>
+                                <h4>Electives (Choose 5)</h4>
+                                <ul>
+                                    <li>Communication Systems</li>
+                                    <li>Internet of Things (IoT)</li>
+                                    <li>Digital IC Design</li>
+                                    <li>Power Management</li>
+                                    <li>Biomedical Systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sample-certificates" class="academic-section">
+            <h2>Sample Certificates</h2>
+            <div class="section-content">
+                <div class="certificate-timeline">
+                    <div class="certificate-item">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certificate-details">
+                            <h3>Foundation Certificate</h3>
+                            <p>43 Credits</p>
+                            <div class="certificate-progress">Level 1 Complete</div>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-details">
+                            <h3>Diploma in Electronic Systems</h3>
+                            <p>86 Credits</p>
+                            <div class="certificate-progress">Level 2 Complete</div>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="certificate-details">
+                            <h3>BS Degree in Electronic Systems</h3>
+                            <p>142 Credits</p>
+                            <div class="certificate-progress">All Levels Complete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="academic-calendar" class="academic-section">
+            <h2>Academic Calendar</h2>
+            <div class="section-content">
+                <div class="calendar-overview">
+                    <div class="semester-card">
+                        <div class="semester-header">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Semester Structure</h3>
+                        </div>
+                        <div class="semester-details">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-book-reader"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>12 Weeks</h4>
+                                    <p>Course Content & Assignments</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-pen"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>2 Quizzes</h4>
+                                    <p>In-person Evaluations</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Final Exam</h4>
+                                    <p>End Semester Assessment</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Program Duration</h4>
+                                    <p>4 - 8 years (Flexible)</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-user-clock"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Weekly Engagement</h4>
+                                    <p>10 hours per course</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="address">IITM BS Degree Office, 3rd Floor, ICSR Building, IIT Madras, Chennai - 600036</p>
+            <div class="contact-links">
+                <a href="tel:+919711397993"><i class="fas fa-phone"></i> +91-9711397993</a>
+                <a href="mailto:support-es@study.iitm.ac.in"><i class="fas fa-envelope"></i> support-es@study.iitm.ac.in</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <span class="copyright"> 2024 IIT Madras</span>
+                <a href="#" class="honor-code">Honor Code</a>
+            </div>
+        </div>
+    </footer>

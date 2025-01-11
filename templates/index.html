@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Madras BS in Electronic Systems</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/testimonials.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <!-- Navbar -->
+    <nav class="main-nav">
+        <div class="nav-left">
+            <button class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="https://es.study.iitm.ac.in/auth/login" class="apply-button">
+                <span class="apply-main">Apply Now</span>
+                <span class="apply-sub">Applications close by January 02, 2025</span>
+            </a>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="https://study.iitm.ac.in/es/login" class="main-sign-in-btn">
+                <i class="fas fa-user"></i>
+                <span>Sign In</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            <div class="header-controls">
+                
+                <button class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Academics</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/academics.html#overall-structure">Overall Structure</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#course-registrations">Course Registrations</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#assessments">Assessments</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#exam-cities">Exam Cities</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#fee-structure">Fee Structure</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#foundation-level">Foundation Level</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#diploma-level">Diploma Level</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#bs-degree-level">BS Degree Level</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#sample-certificates">Sample Certificates</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#academic-calendar">Academic Calendar</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Admissions</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#important-dates">Important Dates</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#mandatory-requirements">Mandatory Requirements</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#eligibility-to-apply">Eligibility to Apply</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#application-process">Application Process</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#admission-to-foundation-level">Admission to the Foundation Level</a></li>
+                    <li class="nested-item">
+                        <a href="https://study.iitm.ac.in/es/admissions.html#regular-entry">1. Regular Entry</a>
+                    </li>
+                    <li class="nested-item">
+                        <a href="https://study.iitm.ac.in/es/admissions.html#jee-based-entry">2. JEE-based Entry</a>
+                    </li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#international-students">International Students</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Resources</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="https://study.iitm.ac.in/es/resources.html#help-videos">Help Videos</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/resources.html#in-the-media">In the Media</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/resources.html#archive">Archive</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Student Life</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/student-life.html">Student Life</a></li>
+                    <li><a href="https://sites.google.com/ds.study.iitm.ac.in/paradox-23/home">PARADOX / Student Festivals</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://study.iitm.ac.in/es/testimonials.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>Testimonials</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://study.iitm.ac.in/es/events.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>Events</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/faq.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>FAQ</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>About IITM</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="https://study.iitm.ac.in/es/about.html#about-iitm">About IIT Madras</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/about.html#faculty-coordinators">Faculty Co-ordinators</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/about.html#contact-us">Contact Us</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/about.html#merchandise">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="hero-content">
+        <h1 class="hero-title">
+            IIT Madras, India's top technical institute, welcomes you to the Four-year
+            <span class="highlight">Bachelor of Science (BS) Degree</span> in <span class="highlight">Electronic Systems</span>.
+        </h1>
+        <p class="hero-subtitle">Study from anywhere, at your own pace.</p>
+        <a href="https://es.study.iitm.ac.in/auth/login" class="apply-button">
+            <span class="apply-main">Apply Now</span>
+            <span class="apply-sub">Applications close by January 02, 2025</span>
+        </a>
+
+        <button class="eligibility-button" id="eligibilityBtn">
+            <span>Check Eligibility</span>
+        </button>
+
+        <div class="features-container">
+            <div class="features-block">
+                <div class="feature-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>World Class Faculty</h3>
+                    <p>Learn from the best in the field</p>
+                </div>
+
+                <div class="feature-divider"></div>
+
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible</h3>
+                    <p>Study at your own pace and schedule</p>
+                </div>
+
+                <div class="feature-divider"></div>
+
+                <div class="feature-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Course Support</h3>
+                    <p>Get assistance whenever you need it</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-highlights">
+            <div class="slider-container">
+                <div class="highlight-cards">
+                    <div class="highlight-card" data-index="0">
+                        <div class="card-header">
+                            <i class="fas fa-book-reader"></i>
+                            <h3>Coursework</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Content, tutorials, doubt clearing sessions & assignments will be online, while quizzes, exams and labs will be conducted in-person. Lab courses will be in-person at IIT Madras campus.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card" data-index="1">
+                        <div class="card-header">
+                            <i class="fas fa-clock"></i>
+                            <h3>Flexibility</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Learn from anywhere, at your convenience. Option is available to choose the number of courses per semester. The BS degree will be awarded once 142 credits are earned.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card active" data-index="2">
+                        <div class="card-header">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3>Eligibility</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Anyone who has completed class 12 with Physics and Maths can apply irrespective of age, role or geographical location.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card" data-index="3">
+                        <div class="card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Skills</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>The graduates of this programme will have strong fundamentals and industry-ready skills.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card" data-index="4">
+                        <div class="card-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Degree</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>IITM senate approves and offers the Diploma(s) and Degree(s). Degree holders become alumni of IIT Madras.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav-arrows">
+                    <button class="nav-arrow prev-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-arrow next-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="slider-nav">
+                    <button class="nav-dot" data-index="0"></button>
+                    <button class="nav-dot" data-index="1"></button>
+                    <button class="nav-dot active" data-index="2"></button>
+                    <button class="nav-dot" data-index="3"></button>
+                    <button class="nav-dot" data-index="4"></button>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="program-info">
+            <div class="info-content">
+                <div class="info-text-container">
+                    <p class="info-text">
+                        The emphasis is on electronics, embedded programming, digital systems, and control engineering. The students will be able to apply the acquired engineering principles and knowledge to implement and improve systems and processes for applications.
+                    </p>
+                    <div class="info-buttons">
+                        <a href="/academics.html" class="cta-button">
+                            Academics
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <button class="cta-button" onclick="document.getElementById('studentLifeModal').style.display='block'">
+                            Student Life
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="cta-button" onclick="document.getElementById('faqModal').style.display='block'">
+                            FAQ
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/n5FU7TTcs9Y" 
+                        title="IIT Madras BS in Electronic Systems"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <div class="timeline-container">
+                <div class="timeline-point active">
+                    <div class="point-content">
+                        <h3>Qualifier Application</h3>
+                        <p>Open Now</p>
+                    </div>
+                </div>
+                <div class="timeline-point">
+                    <div class="point-content">
+                        <h3>Application Closes</h3>
+                        <p>January 02, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-point">
+                    <div class="point-content">
+                        <h3>Qualifier Week 1 Starts</h3>
+                        <p>10th January 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-point">
+                    <div class="point-content">
+                        <h3>Qualifier Exam</h3>
+                        <p>February 23, 2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-term">January 2025 term</div>
+        </div>
+
+        <div class="director-message">
+            <div class="message-container">
+                <div class="director-image">
+                    <img src="{{ url_for('static', filename='icons/director.jpg') }}" alt="Prof. V. Kamakoti">
+                </div>
+                <div class="message-content">
+                    <h2>Message from the Director</h2>
+                    <div class="message-text">
+                        <p>IIT Madras has a rich history of providing high-quality education and this program is designed to underline the fact that IIT is within the reach of everyone. The BS program is meticulously drafted and is aligned with the goals of the National Educational Policy.</p>
+                        <p>With the growing prominence of electronics in the current world scenario, education of electronics fundamentals at scale becomes crucial both for research & development and capacity building to meet the industry demand. Keeping this in mind, IIT Madras offers this BS course which we expect to help meet the need of our nation and aspirations of the student.</p>
+                        <p>We are planning to make IIT Madras a 'Vishwa-guru (Global Teacher)' through innovative approaches to enhance the quality of education. In order to support the students from financially disadvantaged backgrounds to pursue this program, scholarships are being provided.</p>
+                    </div>
+                    <div class="director-signature">
+                        <p class="director-name">Prof. V. Kamakoti</p>
+                        <p class="director-title">Director, IIT Madras</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="award-container"></div>
+            <div class="award-content">
+                <!-- <div class="award-trophy">
+                    
+                    <img src="{{ url_for('static', filename='icons/trophy.png') }}" alt="Trophy">
+                </div> -->
+                
+                <div class="award-text">
+                    <h3>IIT Madras BS Program (DS) wins</h3>
+                    <div class="award-title">
+                        <span class="award-highlight">Best Online Program Award</span>
+                    </div>
+                    <p class="award-subtitle">Silver | 2022</p>
+                </div>
+                
+                <div class="award-by">
+                    <p>Awarded by:</p>
+                    <div class="award-logos">
+                        <!-- Placeholder for QS logo -->
+                        <img src="{{ url_for('static', filename='icons/qs-logo.png') }}" alt="QS Reimagine Education">
+                        <!-- Placeholder for Wharton logo -->
+                        <img src="{{ url_for('static', filename='icons/wharton-logo.png') }}" alt="Wharton">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials-section">
+            <div class="testimonials-header">
+                <h2>What Our Students Say</h2>
+                <p>Hear from our students about their experiences with the BS in Electronic Systems program.</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>I just want to let you know that IITM and its team is doing an amazing job running this program. I'm really lucky to be enrolled into this program. I have never ever received replies for any emails within one day from other universities. I know how difficult it is to reply to a lot of emails. Not only that, right from the program design and course content, every minute things are well planned and carried out. Hats off to your team. Thank you for your support and guidance.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>S Nithish Kumar</h4>
+                            <div class="author-location">from Coimbatore, Tamil Nadu, India</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-nav">
+                        <button class="testimonial-dash active" data-index="0"></button>
+                        <button class="testimonial-dash" data-index="1"></button>
+                        <button class="testimonial-dash" data-index="2"></button>
+                        <button class="testimonial-dash" data-index="3"></button>
+                        <button class="testimonial-dash" data-index="4"></button>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I would like to thank the whole team of IITM Online Degree for coming up with the concept of solving questions with the professors. It has not only helped me in improving my performance drastically in graded assignments, but also it plays a relevant role in making the concepts more clear. Though because of my college schedule I am not able to attend all the live sessions, its recorded form is proving to be very effective for me. A special mention for Prof.Andrew Thangaraj - his tips on problem solving are really helpful. Once again thank you very much for understanding the requirements of the students.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Parth Shukla</h4>
+                            <div class="author-location">from Lucknow, Uttar Pradesh, India</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-nav">
+                        <button class="testimonial-dash" data-index="0"></button>
+                        <button class="testimonial-dash active" data-index="1"></button>
+                        <button class="testimonial-dash" data-index="2"></button>
+                        <button class="testimonial-dash" data-index="3"></button>
+                        <button class="testimonial-dash" data-index="4"></button>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I want to thank the team of IIT Madras who are making this Degree happen for us. I am one of those students who had to face many financial and health issues in the early part of their lives. And studying in IIT is only a dream for students like us. However, this degree program (while maintaining the standard of IIT) has given us a chance to grow and improve in our lives. Also, I have personally checked many online programs by many Institutes and Universities - however, none of them is so inspiring, innovative and challenging (at the same time). It's such a great initiative of IIT Madras.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Yash Raj Karthikey</h4>
+                            <div class="author-location">from Bengaluru, Karnataka, India</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-nav">
+                        <button class="testimonial-dash" data-index="0"></button>
+                        <button class="testimonial-dash" data-index="1"></button>
+                        <button class="testimonial-dash active" data-index="2"></button>
+                        <button class="testimonial-dash" data-index="3"></button>
+                        <button class="testimonial-dash" data-index="4"></button>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I came across this online degree program on the internet. I just completed my 12th standard and was enrolled in a bachelor degree in Hansraj College of Delhi University pursuing physics honours. Apart from my degree I wanted to explore something new. This program from such an esteemed institution like IIT MADRAS seemed exciting to me. The unique program captured my attention and I enrolled for the qualifier level. The unique pedagogy used by the teachers is what I found most engaging. The dedicated support team also helped many learners like me at all times if we faced any difficulties.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Akriti Vishwas</h4>
+                            <div class="author-location">from Lakhimpur Kheri, Uttar Pradesh, India</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-nav">
+                        <button class="testimonial-dash" data-index="0"></button>
+                        <button class="testimonial-dash" data-index="1"></button>
+                        <button class="testimonial-dash" data-index="2"></button>
+                        <button class="testimonial-dash active" data-index="3"></button>
+                        <button class="testimonial-dash" data-index="4"></button>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I want to just like appreciate the IIT team. They are doing a fabulous job. Even though we haven't met, it doesn't like that due to amazing interaction and course planning of BSc course of IIT Madras. They are managing at such a level without disturbing the standard of IIT. Hats off to the team at IIT Madras. Feeling proud to be a part of such a great program.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Satej Sunil Zunjarrao</h4>
+                            <div class="author-location">from Pune, Maharashtra, India</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-nav">
+                        <button class="testimonial-dash" data-index="0"></button>
+                        <button class="testimonial-dash" data-index="1"></button>
+                        <button class="testimonial-dash" data-index="2"></button>
+                        <button class="testimonial-dash" data-index="3"></button>
+                        <button class="testimonial-dash active" data-index="4"></button>
+                    </div>
+                </div>
+
+                <div class="testimonial-arrows">
+                    <button class="arrow-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="arrow-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="eligibilityModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Eligibility Criteria</h2>
+            <p>Anyone who has completed class 12 with Physics and Maths can apply irrespective of age, role or geographical location.</p>
+        </div>
+    </div>
+
+    <!-- Add the Student Life modal -->
+    <div id="studentLifeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Student Life at IIT Madras</h2>
+            <div class="modal-text">
+                <p>Join a supportive, diverse, vibrant community of students and scholars who share your passion. Our reputation for excellence attracts some of the best minds in the world.</p>
+                <p>Alongside the academic activities, students can have fun and develop interests through clubs and extracurricular activities that help them build on social skills and career goals while enjoying a great social life.</p>
+            </div>
+            <div class="modal-cta">
+                <a href="/student-life.html" class="cta-button">
+                    Explore Student Life
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add the FAQ modal -->
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Frequently Asked Questions</h2>
+            <div class="modal-text faq-content">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Who can join?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anyone who has passed Class 12 (or equivalent) in any year with Physics and Mathematics can apply.</p>
+                        <p>School students who have appeared for their Class 11 final exams (with Physics and Mathematics as their subjects of study) can apply. Those who qualify can join the program after passing Class 12.</p>
+                        <p>Check out Eligibility.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the Qualifier Process?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Four weeks of courses and assignments to be completed.</p>
+                        <p>Those who get minimum required scores in weekly assignments in the four weeks will get to write the Qualifier Exam based on the four weeks of content.</p>
+                        <p>Those who get minimum required scores in the Qualifier Exam continue with the program. Others are encouraged to reappear for the qualifier exam.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is being offered?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BS Degree in Electronic Systems</p>
+                        <p>Option to exit earlier with a Foundation Level Certificate or Diploma.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the Structure of the Program?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The program is split into three levels:</p>
+                        <ol>
+                            <li>Foundational Level (44 credits)</li>
+                            <li>Diploma Level (42 credits)</li>
+                            <li>BS Degree level (56 credits)</li>
+                        </ol>
+                        <p>Total: 142 credits for BS Degree.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are these official Diploma and Degree of IIT Madras?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. IITM senate approves and offers the Diploma(s) and Degree(s).</p>
+                        <p>Degree holders become alumni of IIT Madras.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-cta">
+                <a href="/faq.html" class="cta-button">
+                    View All FAQs
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="address">IITM BS Degree Office, 3rd Floor, ICSR Building, IIT Madras, Chennai - 600036</p>
+            <div class="contact-links">
+                <a href="tel:+919711397993"><i class="fas fa-phone"></i> +91-9711397993</a>
+                <a href="mailto:support-es@study.iitm.ac.in"><i class="fas fa-envelope"></i> support-es@study.iitm.ac.in</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <span class="copyright">© 2024 IIT Madras</span>
+                <a href="#" class="honor-code">Honor Code</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

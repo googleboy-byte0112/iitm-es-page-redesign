@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - IIT Madras BS in Electronic Systems</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <!-- Navbar -->
+    <nav class="main-nav">
+        <div class="nav-left">
+            <button class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="https://es.study.iitm.ac.in/auth/login" class="apply-button">
+                <span class="apply-main">Apply Now</span>
+                <span class="apply-sub">Applications close by January 02, 2025</span>
+            </a>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="https://study.iitm.ac.in/es/login" class="main-sign-in-btn">
+                <i class="fas fa-user"></i>
+                <span>Sign In</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            <div class="header-controls">
+                <button class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li>
+                <a href="/" class="menu-link">
+                    <div class="menu-title">
+                        <span><i class="fas fa-home"></i> Home</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Academics</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/academics.html">Overall Structure</a></li>
+                    <li><a href="/academics.html#course-registrations">Course Registrations</a></li>
+                    <li><a href="/academics.html#assessments">Assessments</a></li>
+                    <li><a href="/academics.html#exam-cities">Exam Cities</a></li>
+                    <li><a href="/academics.html#fee-structure">Fee Structure</a></li>
+                    <li><a href="/academics.html#foundation-level">Foundation Level</a></li>
+                    <li><a href="/academics.html#diploma-level">Diploma Level</a></li>
+                    <li><a href="/academics.html#bs-degree-level">BS Degree Level</a></li>
+                    <li><a href="/academics.html#sample-certificates">Sample Certificates</a></li>
+                    <li><a href="/academics.html#academic-calendar">Academic Calendar</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Admissions</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/admissions.html#important-dates">Important Dates</a></li>
+                    <li><a href="/admissions.html#mandatory-requirements">Mandatory Requirements</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="/admissions.html#eligibility-to-apply">Eligibility to Apply</a></li>
+                    <li><a href="/admissions.html#application-process">Application Process</a></li>
+                    <li><a href="/admissions.html#admission-to-foundation-level">Admission to the Foundation Level</a></li>
+                    <li class="nested-item">
+                        <a href="/admissions.html#regular-entry">1. Regular Entry</a>
+                    </li>
+                    <li class="nested-item">
+                        <a href="/admissions.html#jee-based-entry">2. JEE-based Entry</a>
+                    </li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="/admissions.html#international-students">International Students</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Resources</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/resources.html#help-videos">Help Videos</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="/resources.html#in-the-media">In the Media</a></li>
+                    <li><a href="/resources.html#archive">Archive</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Student Life</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/student-life.html">Student Life</a></li>
+                    <li><a href="https://sites.google.com/ds.study.iitm.ac.in/paradox-23/home" target="_blank">PARADOX / Student Festivals</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="/testimonials.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>Testimonials</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/events.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>Events</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/faq.html" class="menu-link active">
+                    <div class="menu-title">
+                        <span>FAQ</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>About IITM</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/about.html#about-iitm">About IIT Madras</a></li>
+                    <li><a href="/about.html#faculty-coordinators">Faculty Co-ordinators</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="/about.html#contact-us">Contact Us</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="/about.html#merchandise">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="faq-container">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about the IIT Madras BS in Electronic Systems program.</p>
+        </div>
+
+        <div class="faq-categories">
+            <button class="category-btn active" data-category="all">All Questions</button>
+            <button class="category-btn" data-category="general">General</button>
+            <button class="category-btn" data-category="eligibility">Eligibility</button>
+            <button class="category-btn" data-category="program">Program Structure</button>
+            <button class="category-btn" data-category="fees">Fees & Payment</button>
+            <button class="category-btn" data-category="exams">Exams & Assessment</button>
+        </div>
+
+        <div class="faq-section" data-category="general">
+            <h2>General Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is BS in Electronic Systems?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>BS in Electronic Systems is a four-year online degree program offered by IIT Madras. The program focuses on electronics, embedded programming, digital systems, and control engineering. Students can learn at their own pace and schedule while receiving a high-quality education from one of India's premier institutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is this an official degree from IIT Madras?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes, this is an official degree approved by the IIT Madras senate. Upon completion, you will receive a BS degree from IIT Madras and become an alumnus of the institute.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section" data-category="eligibility" style="display: none;">
+            <h2>Eligibility & Application</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Who can apply for this program?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Anyone who has passed Class 12 (or equivalent) with Physics and Mathematics can apply, regardless of their age or background. Additionally, students who have appeared for their Class 11 final exams (with Physics and Mathematics) can also apply, and if qualified, can join after passing Class 12.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the application process?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The application process involves:</p>
+                            <ol>
+                                <li>Submitting an online application</li>
+                                <li>Completing a 4-week qualifier course</li>
+                                <li>Taking the qualifier exam</li>
+                                <li>If qualified, enrolling in the program</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section" data-category="program" style="display: none;">
+            <h2>Program Structure</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the program structure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The program is divided into three levels:</p>
+                            <ul>
+                                <li>Foundation Level (44 credits)</li>
+                                <li>Diploma Level (42 credits)</li>
+                                <li>BS Degree Level (56 credits)</li>
+                            </ul>
+                            <p>Total: 142 credits for BS Degree</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does it take to complete the program?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The program is flexible and can be completed at your own pace. Full-time students typically take 4 courses per term, while working professionals are recommended to take 2-3 courses per term. The program can be completed in 4 years, but you have the flexibility to take longer if needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section" data-category="fees" style="display: none;">
+            <h2>Fees & Payment</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the program fees?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The fee structure is designed to be affordable:</p>
+                            <ul>
+                                <li>Application Fee: ₹3,000</li>
+                                <li>Qualifier Fee: ₹5,000</li>
+                                <li>Course Fee: Approximately ₹2,000 per credit</li>
+                            </ul>
+                            <p>Scholarships are available for eligible candidates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are scholarships available?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes, scholarships are available for students from economically disadvantaged backgrounds. The scholarship details and application process will be shared with eligible candidates after admission.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section" data-category="exams" style="display: none;">
+            <h2>Exams & Assessment</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How are the exams conducted?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>While the coursework is online, exams are conducted in-person at designated exam centers across India. The assessment includes:</p>
+                            <ul>
+                                <li>Weekly assignments (online)</li>
+                                <li>Mid-term exams (in-person)</li>
+                                <li>End-term exams (in-person)</li>
+                                <li>Lab courses (in-person at IIT Madras campus)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Where are the exam centers located?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Exam centers are available in major cities across India. The exact list of cities is provided before each examination cycle, and students can choose their preferred center based on availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Category switching
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const faqSections = document.querySelectorAll('.faq-section');
+
+            // Show all sections initially
+            function showAllSections() {
+                faqSections.forEach(section => {
+                    section.style.display = 'block';
+                });
+            }
+
+            // Initial state - show all sections
+            showAllSections();
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const category = button.dataset.category;
+                    
+                    if (category === 'all') {
+                        showAllSections();
+                    } else {
+                        // Show corresponding section
+                        faqSections.forEach(section => {
+                            if (section.dataset.category === category) {
+                                section.style.display = 'block';
+                            } else {
+                                section.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+
+            // FAQ item expansion
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const wasActive = item.classList.contains('active');
+                    
+                    // Close all items in the same section
+                    const section = item.closest('.faq-section');
+                    section.querySelectorAll('.faq-item').forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                    });
+                    
+                    // Toggle clicked item
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Initialize sidebar functionality
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const closeSidebar = document.querySelector('.close-sidebar');
+            const sidebar = document.querySelector('.sidebar');
+            
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.add('active');
+            });
+            
+            closeSidebar.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+            });
+
+            // Submenu toggle
+            document.querySelectorAll('.menu-item').forEach(item => {
+                const title = item.querySelector('.menu-title');
+                if (title) {
+                    title.addEventListener('click', () => {
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="address">IITM BS Degree Office, 3rd Floor, ICSR Building, IIT Madras, Chennai - 600036</p>
+            <div class="contact-links">
+                <a href="tel:+919711397993"><i class="fas fa-phone"></i> +91-9711397993</a>
+                <a href="mailto:support-es@study.iitm.ac.in"><i class="fas fa-envelope"></i> support-es@study.iitm.ac.in</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <span class="copyright">© 2024 IIT Madras</span>
+                <a href="#" class="honor-code">Honor Code</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Life - IIT Madras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/student-life.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="main-nav">
+        <div class="nav-left">
+            <button class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="nav-logo">
+                <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="https://es.study.iitm.ac.in/auth/login" class="apply-button">
+                <span class="apply-main">Apply Now</span>
+                <span class="apply-sub">Applications close by January 02, 2025</span>
+            </a>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="https://study.iitm.ac.in/es/login" class="main-sign-in-btn">
+                <i class="fas fa-user"></i>
+                <span>Sign In</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="{{ url_for('static', filename='icons/iitmlogo.svg') }}" alt="IITM Logo">
+            <div class="header-controls">
+                <button class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li>
+                <a href="/" class="menu-link">
+                    <div class="menu-title">
+                        <span>Home</span>
+                        <i class="fas fa-home"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Academics</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/academics.html#overall-structure">Overall Structure</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#course-registrations">Course Registrations</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#assessments">Assessments</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#exam-cities">Exam Cities</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#fee-structure">Fee Structure</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#foundation-level">Foundation Level</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#diploma-level">Diploma Level</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#bs-degree-level">BS Degree Level</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#sample-certificates">Sample Certificates</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/academics.html#academic-calendar">Academic Calendar</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Admissions</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#important-dates">Important Dates</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#mandatory-requirements">Mandatory Requirements</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#eligibility-to-apply">Eligibility to Apply</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#application-process">Application Process</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#admission-to-foundation-level">Admission to the Foundation Level</a></li>
+                    <li class="nested-item">
+                        <a href="https://study.iitm.ac.in/es/admissions.html#regular-entry">1. Regular Entry</a>
+                    </li>
+                    <li class="nested-item">
+                        <a href="https://study.iitm.ac.in/es/admissions.html#jee-based-entry">2. JEE-based Entry</a>
+                    </li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/admissions.html#international-students">International Students</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>Resources</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="https://study.iitm.ac.in/es/resources.html#help-videos">Help Videos</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/resources.html#in-the-media">In the Media</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/resources.html#archive">Archive</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item active">
+                <div class="menu-title">
+                    <span>Student Life</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="#houses">Houses</a></li>
+                    <li><a href="#societies">Societies</a></li>
+                    <li><a href="https://sites.google.com/ds.study.iitm.ac.in/paradox-23/home">PARADOX</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="/testimonials.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>Testimonials</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/events.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>Events</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/faq.html" class="menu-link">
+                    <div class="menu-title">
+                        <span>FAQ</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <div class="menu-title">
+                    <span>About IITM</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="https://study.iitm.ac.in/es/about.html#about-iitm">About IIT Madras</a></li>
+                    <li><a href="https://study.iitm.ac.in/es/about.html#faculty-coordinators">Faculty Co-ordinators</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/about.html#contact-us">Contact Us</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://study.iitm.ac.in/es/about.html#merchandise">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="student-life-content">
+        <section class="student-life-hero">
+            <h1>Student Life at IIT Madras</h1>
+            <p class="hero-tagline">Experience a vibrant community of learners and innovators</p>
+        </section>
+
+        <!-- Rest of your existing content -->
+        <section id="houses" class="houses">
+            <h2>Our Twelve Houses</h2>
+            <ul>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/bandipur.jpg') }}" alt="Bandipur">
+                    <a href="https://study.iitm.ac.in/es/bandipur.html" target="_blank">Bandipur</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/corbett.jpg') }}" alt="Corbett">
+                    <a href="https://study.iitm.ac.in/es/corbett.html" target="_blank">Corbett</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/gir.jpg') }}" alt="Gir">
+                    <a href="https://study.iitm.ac.in/es/gir.html" target="_blank">Gir</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/kanha.jpg') }}" alt="Kanha">
+                    <a href="https://study.iitm.ac.in/es/kanha.html" target="_blank">Kanha</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/kaziranga.webp') }}" alt="Kaziranga">
+                    <a href="https://study.iitm.ac.in/es/kaziranga.html" target="_blank">Kaziranga</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/nallamala.jpg') }}" alt="Nallamala">
+                    <a href="https://study.iitm.ac.in/es/nallamala.html" target="_blank">Nallamala</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/namdapha.jpg') }}" alt="Namdapha">
+                    <a href="https://study.iitm.ac.in/es/namdapha.html" target="_blank">Namdapha</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/nilgiri.webp') }}" alt="Nilgiri">
+                    <a href="https://study.iitm.ac.in/es/nilgiri.html" target="_blank">Nilgiri</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/pichavaram.jpg') }}" alt="Pichavaram">
+                    <a href="https://study.iitm.ac.in/es/pichavaram.html" target="_blank">Pichavaram</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/saranda.webp') }}" alt="Saranda">
+                    <a href="https://study.iitm.ac.in/es/saranda.html" target="_blank">Saranda</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/sundarbans.jpg') }}" alt="Sundarbans">
+                    <a href="https://study.iitm.ac.in/es/sundarbans.html" target="_blank">Sundarbans</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='icons/wayanad.webp') }}" alt="Wayanad">
+                    <a href="https://study.iitm.ac.in/es/wayanad.html" target="_blank">Wayanad</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="societies" class="societies">
+            <h2>Societies</h2>
+            <ul>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-theater-masks"></i>
+                        <a href="#">Aayam - Drama Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        drama.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-book"></i>
+                        <a href="#">Adhyay - Civil Services Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        civilservices.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-music"></i>
+                        <a href="#">AKORD Music Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        music.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-cloud"></i>
+                        <a href="#">AWS Cloud Club, IIT Madras</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        cloudcoders@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-comments"></i>
+                        <a href="#">Veritas Oratory Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        oratory.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-om"></i>
+                        <a href="#">Deva-Bhasha: The Sanskrit Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        sanskrit.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-chart-line"></i>
+                        <a href="#">Amartya - The Finance Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        finance.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-gamepad"></i>
+                        <a href="#">Heighers eSports Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        esports.club@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-chess"></i>
+                        <a href="#">IIT Madras BS chess community - "Shah-Maat"</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        chess.club@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-dancing"></i>
+                        <a href="#">Pravāha: The Dance Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        dance.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-heart"></i>
+                        <a href="#">RAAHAT : the Mental Health & Wellness Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        wellness.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-microscope"></i>
+                        <a href="#">RaSoR : Ramanujan Society of Research</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        research.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-hands-helping"></i>
+                        <a href="#">SAHARA - The Social Welfare Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        connectwithsahara@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-book-open"></i>
+                        <a href="#">Sahityika: Literary Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        literary.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-brain"></i>
+                        <a href="#">SYNAPSE : The Social Studies Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        culturalstudy.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-question-circle"></i>
+                        <a href="#">WYZ Kids : The IITM BS Quiz Club</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        quiz.club@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-plane"></i>
+                        <a href="#">Boundless - IITM BS Travel Club</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        boundless.club@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-tshirt"></i>
+                        <a href="#">Elan - Fashion Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        fashion.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-film"></i>
+                        <a href="#">IIT Madras BS Film Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        film.society@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-globe"></i>
+                        <a href="#">Diplomacia</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        diplomacia@study.iiym.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-users"></i>
+                        <a href="#">JITSIE IIT Madras</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        jitsie@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-briefcase"></i>
+                        <a href="#">General Management Club</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        gm.club@study.iitm.ac.in
+                    </div>
+                </li>
+                <li>
+                    <div class="society-name">
+                        <i class="fas fa-code"></i>
+                        <a href="#">CodeCrafters Coding Society</a>
+                    </div>
+                    <div class="society-email">
+                        <i class="fas fa-envelope"></i>
+                        codecrafters.society@study.iitm.ac.in
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="goals" class="goals-section">
+            <h2>Our Goals & Initiatives</h2>
+
+            <div class="goal-card">
+                <h3><i class="fas fa-users"></i> We nurture Leadership & Organisational skills</h3>
+                <p>Students gain invaluable skills and experiential knowledge during their time in IITM BS Degree.</p>
+                <ul>
+                    <li>We offer you space to lead a diverse community of Houses, Clubs or Groups.</li>
+                    <li>We inspire you to conduct events, support fellow students, and participate in team activities.</li>
+                </ul>
+            </div>
+
+            <div class="goal-card">
+                <h3><i class="fas fa-star"></i> We enrich your experiences</h3>
+                <p>Alongside your academic activities you can have fun and develop your interests through clubs and extracurricular activities. It helps you build on your social skills and career goals while enjoying a great social life.</p>
+                <ul>
+                    <li>We encourage you to express interest in forming any kind of club that will be run by the students for the students.</li>
+                    <li>Come forward and complement your academics with an array of clubs that advocates art, music, dance, culture, entrepreneurship, research, volunteering etc.</li>
+                </ul>
+            </div>
+
+            <div class="goal-card">
+                <h3><i class="fas fa-balance-scale"></i> We promote equity</h3>
+                <p>Gender, age, physical disability, socio-economic status, religion, or ethnic origin will never be an obstacle. Step forward and proudly be part of our inclusive community of learners from all walks of life. We thrive on diversity and that's our strength.</p>
+                <ul>
+                    <li>We sensitise learners on gender equality and diversity through training.</li>
+                    <li>We assure safe virtual space against cyber bullying through online safety training.</li>
+                    <li>We support Clubs & activities that promote Equity through art, culture, campaigning etc.</li>
+                </ul>
+            </div>
+
+            <div class="goal-card">
+                <h3><i class="fas fa-heart"></i> We care for your wellbeing</h3>
+                <p>Lack of physical presence, demanding academic schedule, and multitasking can have an impact on your mental wellbeing. Whatever you might be going through, if you feel like you need to talk, you are not alone. Reach out to us.</p>
+                <p>We provide you access to the Wellness Community Center in the IITM campus for professional help.</p>
+            </div>
+
+            <div class="goal-card">
+                <h3><i class="fas fa-comment-alt"></i> We redress your grievances</h3>
+                <p>All complaints of bullying or harassment will be taken seriously by the IITM BS Degree Team. The aim is to provide the support needed to help individuals decide the best course of action, and to resolve the issues raised through formal complaint procedures.</p>
+                <ul>
+                    <li>You can raise complaint against matters related to behaviour of staff members or fellow students</li>
+                    <li>Complaints box (<a href="mailto:students-grievance@study.iitm.ac.in">students-grievance@study.iitm.ac.in</a>)</li>
+                </ul>
+            </div>
+
+            <div class="goal-card">
+                <h3><i class="fas fa-ear-listen"></i> We Hear you</h3>
+                <p>Diverse, vibrant, hardworking, determined and self-motivated student community has contributed to continuous development of this pioneering programme.</p>
+                <ul>
+                    <li>We look forward to your proposals that would change or modify policies pertaining to student life. (<a href="mailto:student-affairs@study.iitm.ac.in">student-affairs@study.iitm.ac.in</a>)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="address">IITM BS Degree Office, 3rd Floor, ICSR Building, IIT Madras, Chennai - 600036</p>
+            <div class="contact-links">
+                <a href="tel:+919711397993"><i class="fas fa-phone"></i> +91-9711397993</a>
+                <a href="mailto:support-es@study.iitm.ac.in"><i class="fas fa-envelope"></i> support-es@study.iitm.ac.in</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <span class="copyright">© 2024 IIT Madras</span>
+                <a href="#" class="honor-code">Honor Code</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

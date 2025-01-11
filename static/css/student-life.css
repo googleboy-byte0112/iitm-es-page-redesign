@@ -1,0 +1,453 @@
+/* Student Life Styles */
+.student-life-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.student-life-hero {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.student-life-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-color-dark) 100%);
+}
+
+.student-life-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 90%;
+    margin: 0.5rem auto;
+}
+
+/* Houses Section */
+.houses {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.houses h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.houses h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.houses ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.houses li {
+    background: var(--bg-primary);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.houses li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+}
+
+.houses img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: var(--bg-secondary);
+    padding: 0.25rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.houses li:hover img {
+    transform: scale(1.1);
+    border-color: var(--accent-color);
+}
+
+.houses a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.houses a:hover {
+    color: var(--accent-color);
+}
+
+/* Societies Section */
+.societies {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.societies h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.societies h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.societies ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.societies li {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.societies li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+}
+
+.society-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.society-name i {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    width: 24px;
+    text-align: center;
+}
+
+.society-name a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.society-name a:hover {
+    color: var(--accent-color);
+}
+
+.society-email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding-left: calc(24px + 1rem);
+}
+
+.society-email i {
+    font-size: 0.9rem;
+    width: 24px;
+    text-align: center;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] .societies li {
+    background: var(--bg-secondary);
+    border-color: rgba(139, 0, 0, 0.1);
+}
+
+[data-theme="light"] .societies li:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.1);
+}
+
+[data-theme="light"] .society-name a {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .society-name a:hover {
+    color: var(--accent-color);
+}
+
+[data-theme="light"] .society-email {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .houses img {
+    background-color: var(--bg-primary);
+    border-color: rgba(139, 0, 0, 0.1);
+}
+
+[data-theme="light"] .houses li:hover img {
+    border-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-life-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .houses ul, .societies ul {
+        grid-template-columns: 1fr;
+    }
+
+    .houses li, .societies li {
+        margin: 1rem 0;
+    }
+
+    .societies ul {
+        grid-template-columns: 1fr;
+    }
+
+    .society-name {
+        flex-wrap: wrap;
+    }
+
+    .society-email {
+        padding-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Goals Section */
+.goals-section {
+    margin: 4rem 0;
+}
+
+.goals-section h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.goals-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.goal-card {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color);
+}
+
+.goal-card h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.goal-card h3 i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.goal-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.goal-card ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.goal-card ul li {
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.goal-card ul li::before {
+    content: '•';
+    color: var(--accent-color);
+    position: absolute;
+    left: -1.5rem;
+}
+
+.goal-card a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.goal-card a:hover {
+    color: var(--accent-color-dark);
+}
+
+/* Footer Styles */
+.footer {
+    background: var(--bg-secondary);
+    padding: 1rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer .address {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer .contact-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer .contact-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .social-links a {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.footer .footer-bottom {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer .copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer .honor-code {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .contact-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
